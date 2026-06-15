@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dally Malinao — Virtual Assistant, Social Media Manager & GoHighLevel Specialist based in the Philippines. Helping international businesses grow with precision automation and strategic support.">
+<meta name="keywords" content="Virtual Assistant Philippines, GoHighLevel Specialist, Social Media Manager, GHL Automation, Freelance VA, Remote Worker">
+<meta property="og:title" content="Dally Malinao | Virtual Assistant & GHL Specialist">
+<meta property="og:description" content="Reliable, detail-oriented VA helping international clients streamline operations and grow their business.">
+<title>Dally Malinao | VA · Social Media Manager · GoHighLevel Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0F172A;
+    --navy-mid: #1E293B;
+    --navy-light: #334155;
+    --emerald: #10B981;
+    --emerald-dark: #059669;
+    --emerald-glow: rgba(16,185,129,0.12);
+    --white: #FFFFFF;
+    --gray-100: #F8FAFC;
+    --gray-200: #E2E8F0;
+    --gray-400: #94A3B8;
+    --gray-600: #64748B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; line-height: 1.2; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,23,42,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(16,185,129,0.15);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; font-size: 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--emerald); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--gray-400); text-decoration: none;
+    font-size: 0.875rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--emerald); }
+  .nav-cta {
+    background: var(--emerald); color: var(--navy);
+    padding: 0.5rem 1.25rem; border-radius: 6px;
+    font-weight: 600; font-size: 0.875rem;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--emerald-dark); }
+  .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; color: var(--white); font-size: 1.5rem; }
+
+  /* ── HERO ── */
+  #hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 6rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #hero::after {
+    content: '';
+    position: absolute; bottom: -150px; left: -150px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--emerald-glow);
+    border: 1px solid rgba(16,185,129,0.3);
+    color: var(--emerald);
+    padding: 0.35rem 1rem; border-radius: 100px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: '●'; font-size: 0.6rem; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero-h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800; color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .hero-h1 span { color: var(--emerald); }
+  .hero-typewriter {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--gray-400);
+    margin-bottom: 1.5rem;
+    min-height: 2rem;
+    font-family: 'Poppins', sans-serif; font-weight: 600;
+  }
+  .hero-typewriter .typed { color: var(--emerald); }
+  .cursor { display: inline-block; width: 2px; background: var(--emerald); animation: blink 1s step-end infinite; margin-left: 2px; vertical-align: middle; height: 1.2em; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  .hero-desc {
+    color: var(--gray-400); font-size: 1rem; line-height: 1.75;
+    margin-bottom: 2rem; max-width: 480px;
+  }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--emerald); color: var(--navy);
+    padding: 0.85rem 2rem; border-radius: 8px;
+    font-weight: 700; text-decoration: none;
+    font-size: 0.95rem; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+  }
+  .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 0.85rem 2rem; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-weight: 600; text-decoration: none;
+    font-size: 0.95rem; transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--emerald); color: var(--emerald); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; font-weight: 800; color: var(--white);
+  }
+  .stat-num span { color: var(--emerald); }
+  .stat-label { font-size: 0.8rem; color: var(--gray-400); margin-top: 2px; }
+
+  .hero-right { display: flex; justify-content: center; }
+  .hero-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(16,185,129,0.2);
+    border-radius: 16px; padding: 2rem;
+    width: 100%; max-width: 380px;
+  }
+  .hero-avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--emerald) 0%, #059669 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; font-weight: 800; color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .hero-card h3 {
+    color: var(--white); font-size: 1.1rem; margin-bottom: 0.25rem;
+  }
+  .hero-card p { color: var(--gray-400); font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .availability-tag {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25);
+    color: var(--emerald); padding: 0.3rem 0.75rem; border-radius: 100px;
+    font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem;
+  }
+  .availability-tag::before { content: '●'; font-size: 0.55rem; animation: pulse 2s infinite; }
+  .quick-skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .skill-chip {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    color: var(--gray-200); padding: 0.3rem 0.75rem; border-radius: 6px;
+    font-size: 0.78rem; font-weight: 500;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow {
+    color: var(--emerald); font-size: 0.8rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700; margin-bottom: 1rem;
+  }
+  .section-sub {
+    color: var(--gray-600); font-size: 1rem; max-width: 580px; line-height: 1.75;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--gray-100); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .about-img-block {
+    background: var(--navy);
+    border-radius: 16px; aspect-ratio: 4/5;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .about-img-block::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 50%;
+    background: linear-gradient(to top, rgba(16,185,129,0.15), transparent);
+  }
+  .about-initials {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem; font-weight: 800;
+    color: rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .about-location-badge {
+    position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+    background: var(--navy-mid); border: 1px solid rgba(16,185,129,0.3);
+    color: var(--white); padding: 0.5rem 1rem; border-radius: 100px;
+    font-size: 0.8rem; white-space: nowrap;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .about-location-badge span { color: var(--emerald); font-weight: 600; }
+  .about-text h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+  .about-text h3:first-child { margin-top: 0; }
+  .about-text p { color: var(--gray-600); line-height: 1.8; margin-bottom: 1rem; }
+  .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .pillar {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-left: 3px solid var(--emerald);
+    border-radius: 8px; padding: 1rem;
+  }
+  .pillar strong { display: block; font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: var(--navy); margin-bottom: 0.25rem; }
+  .pillar span { font-size: 0.8rem; color: var(--gray-600); }
+
+  /* ── SERVICES ── */
+  #services { background: var(--navy); }
+  #services .section-title { color: var(--white); }
+  #services .section-sub { color: var(--gray-400); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .service-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .service-card:hover { border-color: rgba(16,185,129,0.4); transform: translateY(-2px); }
+  .service-icon {
+    width: 48px; height: 48px; background: var(--emerald-glow);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1.25rem;
+  }
+  .service-card h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 0.75rem; }
+  .service-card p { color: var(--gray-400); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.25rem; }
+  .service-features { list-style: none; }
+  .service-features li {
+    color: var(--gray-400); font-size: 0.82rem; padding: 0.3rem 0;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .service-features li::before { content: '→'; color: var(--emerald); font-weight: 700; }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--gray-100); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+  .skill-bar-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .skill-bar-card h4 { font-size: 0.9rem; color: var(--navy); margin-bottom: 1rem; }
+  .skill-item { margin-bottom: 1rem; }
+  .skill-item:last-child { margin-bottom: 0; }
+  .skill-row { display: flex; justify-content: space-between; margin-bottom: 0.35rem; }
+  .skill-name { font-size: 0.82rem; color: var(--gray-600); }
+  .skill-pct { font-size: 0.82rem; color: var(--emerald); font-weight: 600; }
+  .skill-track { background: var(--gray-200); border-radius: 100px; height: 6px; overflow: hidden; }
+  .skill-fill { height: 100%; border-radius: 100px; background: var(--emerald); transition: width 1s ease; }
+
+  /* ── TOOLS ── */
+  #tools { background: var(--white); }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 3rem; }
+  .tool-card {
+    background: var(--gray-100); border: 1px solid var(--gray-200);
+    border-radius: 10px; padding: 1.5rem 1rem; text-align: center;
+    transition: all 0.2s;
+  }
+  .tool-card:hover { border-color: var(--emerald); transform: translateY(-2px); background: var(--white); }
+  .tool-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .tool-card span { font-size: 0.82rem; color: var(--gray-600); font-weight: 500; }
+
+  /* ── PORTFOLIO ── */
+  #portfolio { background: var(--gray-100); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .portfolio-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 12px; overflow: hidden; transition: all 0.2s;
+  }
+  .portfolio-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+  .portfolio-img {
+    height: 200px; background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; position: relative;
+  }
+  .portfolio-tag {
+    position: absolute; top: 1rem; left: 1rem;
+    background: var(--emerald); color: var(--navy);
+    padding: 0.2rem 0.6rem; border-radius: 4px;
+    font-size: 0.7rem; font-weight: 700;
+  }
+  .portfolio-body { padding: 1.5rem; }
+  .portfolio-body h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.5rem; }
+  .portfolio-body p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; }
+  .portfolio-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .tech-pill {
+    background: var(--gray-100); border: 1px solid var(--gray-200);
+    color: var(--gray-600); padding: 0.2rem 0.6rem; border-radius: 4px;
+    font-size: 0.72rem;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--white); }
+  .timeline { position: relative; margin-top: 3rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+    width: 2px; background: var(--gray-200);
+  }
+  .timeline-item { padding-left: 60px; position: relative; margin-bottom: 2.5rem; }
+  .timeline-dot {
+    position: absolute; left: 0; top: 4px;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--emerald-glow); border: 2px solid var(--emerald);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .timeline-year {
+    display: inline-block;
+    color: var(--emerald); font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;
+  }
+  .timeline-item h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.2rem; }
+  .timeline-item .company { color: var(--gray-600); font-size: 0.85rem; margin-bottom: 0.75rem; }
+  .timeline-item ul { list-style: none; }
+  .timeline-item ul li {
+    color: var(--gray-600); font-size: 0.88rem; padding: 0.25rem 0;
+    display: flex; align-items: flex-start; gap: 0.5rem;
+  }
+  .timeline-item ul li::before { content: '·'; color: var(--emerald); font-size: 1.2rem; line-height: 1.3; flex-shrink: 0; }
+
+  /* ── WHY ME ── */
+  #why { background: var(--navy); }
+  #why .section-title { color: var(--white); }
+  #why .section-sub { color: var(--gray-400); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .why-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 2rem; text-align: center;
+  }
+  .why-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem; font-weight: 800;
+    color: var(--emerald); margin-bottom: 0.5rem;
+  }
+  .why-card h3 { color: var(--white); font-size: 1rem; margin-bottom: 0.75rem; }
+  .why-card p { color: var(--gray-400); font-size: 0.85rem; line-height: 1.7; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--gray-100); }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .testi-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 12px; padding: 2rem;
+  }
+  .stars { color: #F59E0B; font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .testi-card blockquote {
+    color: var(--gray-600); font-size: 0.9rem; line-height: 1.75;
+    font-style: italic; margin-bottom: 1.5rem;
+  }
+  .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+  .testi-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--emerald-glow); border: 2px solid var(--emerald);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: var(--emerald); font-size: 0.85rem;
+  }
+  .testi-info strong { display: block; font-size: 0.85rem; color: var(--navy); }
+  .testi-info span { font-size: 0.78rem; color: var(--gray-400); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy); }
+  #contact .section-title { color: var(--white); }
+  #contact .section-sub { color: var(--gray-400); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; margin-top: 3rem; }
+  .contact-methods { display: flex; flex-direction: column; gap: 1.25rem; }
+  .contact-method {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; padding: 1.25rem;
+    text-decoration: none; transition: border-color 0.2s;
+  }
+  .contact-method:hover { border-color: rgba(16,185,129,0.4); }
+  .method-icon {
+    width: 44px; height: 44px; background: var(--emerald-glow);
+    border: 1px solid rgba(16,185,129,0.3); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .method-label { font-size: 0.75rem; color: var(--gray-400); }
+  .method-value { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 0.85rem 1rem;
+    color: var(--white); font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; width: 100%;
+    transition: border-color 0.2s;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: var(--gray-600); }
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    outline: none; border-color: rgba(16,185,129,0.5);
+  }
+  .contact-form textarea { resize: vertical; min-height: 120px; }
+  .contact-form .btn-primary { border: none; cursor: pointer; font-family: 'Inter', sans-serif; width: 100%; justify-content: center; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080D1A; border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2.5rem 2rem; text-align: center;
+  }
+  .footer-logo { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--white); font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .footer-logo span { color: var(--emerald); }
+  footer p { color: var(--gray-600); font-size: 0.82rem; }
+  footer p a { color: var(--emerald); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-right { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-img-block { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); padding: 1.5rem 2rem; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 99; }
+    .nav-mobile-btn { display: block; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .about-pillars { grid-template-columns: 1fr; }
+  }
+
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Dally<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <button class="nav-mobile-btn" id="mobileBtn" aria-label="Toggle menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Available for Freelance Work</div>
+      <h1 class="hero-h1">Hi, I'm <span>Dally Malinao</span></h1>
+      <div class="hero-typewriter">
+        Your <span class="typed" id="typed"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-desc">
+        I help international businesses run smoother, grow faster, and convert better — through precision automation, strategic social media, and rock-solid virtual support from the Philippines.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Work With Me →</a>
+        <a href="#portfolio" class="btn-secondary">See My Work</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">3<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">20<span>+</span></div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div>
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-avatar">DM</div>
+        <h3>Dally Malinao</h3>
+        <p>Virtual Assistant · Social Media Manager · GHL Specialist</p>
+        <div class="availability-tag">Open to new opportunities</div>
+        <div class="quick-skills">
+          <span class="skill-chip">GoHighLevel</span>
+          <span class="skill-chip">Social Media</span>
+          <span class="skill-chip">Automation</span>
+          <span class="skill-chip">CRM Setup</span>
+          <span class="skill-chip">Canva Design</span>
+          <span class="skill-chip">Lead Gen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-eyebrow">About Me</div>
+    <h2 class="section-title">The person behind the systems</h2>
+    <div class="about-grid">
+      <div class="about-img-block">
+        <div class="about-initials">DM</div>
+        <div class="about-location-badge">📍 <span>Philippines</span> — available globally</div>
+      </div>
+      <div class="about-text fade-in">
+        <h3>My Story</h3>
+        <p>I'm Dally Malinao, a results-driven Virtual Assistant, Social Media Manager, and GoHighLevel Specialist based in the Philippines. I've spent the last several years mastering the tools and strategies that modern online businesses rely on — and I bring that expertise to every client I work with.</p>
+        <p>What started as a passion for organization and technology grew into a career where I help entrepreneurs, coaches, and agencies reclaim their time, sharpen their online presence, and build systems that actually work while they sleep.</p>
+
+        <h3>What I Do</h3>
+        <p>From building high-converting GHL funnels and automating complex workflows, to managing social media accounts that grow real audiences — I'm the reliable, detail-oriented partner your business needs to scale without the chaos.</p>
+
+        <h3>Why Hire Me</h3>
+        <div class="about-pillars">
+          <div class="pillar"><strong>Detail-Oriented</strong><span>I catch what others miss and deliver work that's right the first time.</span></div>
+          <div class="pillar"><strong>Fast Learner</strong><span>New tools and workflows? I pick them up quickly and apply them strategically.</span></div>
+          <div class="pillar"><strong>Process-Driven</strong><span>I document everything so your business runs consistently, with or without me watching.</span></div>
+          <div class="pillar"><strong>Clear Communicator</strong><span>You'll always know what's happening. No guessing, no radio silence.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow">What I Offer</div>
+    <h2 class="section-title" style="color:var(--white);">Services built around your growth</h2>
+    <p class="section-sub">Every service I offer is focused on one thing: giving you your time back while keeping your business moving forward.</p>
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <div class="service-icon">🛠️</div>
+        <h3>Virtual Assistance</h3>
+        <p>Comprehensive administrative support so you can focus on high-value work instead of tasks that drain your day.</p>
+        <ul class="service-features">
+          <li>Calendar & appointment scheduling</li>
+          <li>Email inbox management</li>
+          <li>Data entry & CRM updates</li>
+          <li>Research & reporting</li>
+          <li>Document preparation</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">📱</div>
+        <h3>Social Media Management</h3>
+        <p>Strategic, consistent, and on-brand social presence that builds your audience and drives real engagement.</p>
+        <ul class="service-features">
+          <li>Facebook & Instagram strategy</li>
+          <li>Content planning & scheduling</li>
+          <li>Canva graphic creation</li>
+          <li>Community management</li>
+          <li>Performance analytics</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">⚡</div>
+        <h3>GoHighLevel Setup & Automation</h3>
+        <p>Full GHL implementation that turns your marketing tech into a lead-converting, client-nurturing machine.</p>
+        <ul class="service-features">
+          <li>Funnel & website builds</li>
+          <li>Workflow & automation setup</li>
+          <li>CRM pipeline configuration</li>
+          <li>Email & SMS campaigns</li>
+          <li>Snapshot builds & deployment</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">🎯</div>
+        <h3>Lead Generation</h3>
+        <p>Systematic strategies to fill your pipeline with qualified prospects who actually want what you're selling.</p>
+        <ul class="service-features">
+          <li>Lead magnet setup</li>
+          <li>Opt-in page builds</li>
+          <li>Facebook lead ad management</li>
+          <li>Follow-up sequence creation</li>
+          <li>CRM lead tracking</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">📋</div>
+        <h3>Administrative Support</h3>
+        <p>Behind-the-scenes execution that keeps your business organized, responsive, and running without friction.</p>
+        <ul class="service-features">
+          <li>Customer support & responses</li>
+          <li>Task & project management</li>
+          <li>File organization</li>
+          <li>Reporting & documentation</li>
+          <li>Process creation & SOPs</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-eyebrow">My Skills</div>
+    <h2 class="section-title">Core competencies</h2>
+    <p class="section-sub">A well-rounded skill set that covers the technical, creative, and operational sides of modern online business support.</p>
+    <div class="skills-grid">
+      <div class="skill-bar-card fade-in">
+        <h4>Automation & CRM</h4>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">GoHighLevel</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Workflow Automation</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">CRM Setup & Management</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Funnel Building</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+      </div>
+
+      <div class="skill-bar-card fade-in">
+        <h4>Social Media & Content</h4>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Social Media Management</span><span class="skill-pct">93%</span></div><div class="skill-track"><div class="skill-fill" data-width="93"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Content Creation</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Canva Design</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Facebook & IG Marketing</span><span class="skill-pct">87%</span></div><div class="skill-track"><div class="skill-fill" data-width="87"></div></div></div>
+      </div>
+
+      <div class="skill-bar-card fade-in">
+        <h4>Administrative & Support</h4>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Email Management</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Calendar Management</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Customer Support</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Data Entry & Research</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="container">
+    <div class="section-eyebrow">Tech Stack</div>
+    <h2 class="section-title">Tools & software I use</h2>
+    <p class="section-sub">Proficient in the platforms that modern businesses depend on every day.</p>
+    <div class="tools-grid">
+      <div class="tool-card fade-in"><div class="tool-icon">⚡</div><span>GoHighLevel</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">🎨</div><span>Canva</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">📧</div><span>Google Workspace</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">📋</div><span>Trello</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">📘</div><span>Facebook Business Suite</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">📸</div><span>Instagram</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">🤖</div><span>ChatGPT</span></div>
+      <div class="tool-card fade-in"><div class="tool-icon">📊</div><span>Google Drive</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-eyebrow">Portfolio</div>
+    <h2 class="section-title">Work that speaks for itself</h2>
+    <p class="section-sub">A sample of projects across automation, design, and strategy — each built with a clear goal and measurable outcome in mind.</p>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#0F2A1E;">
+          <span>⚡</span>
+          <div class="portfolio-tag">GHL</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>Coaching Business GHL Funnel</h3>
+          <p>Built a complete sales funnel in GoHighLevel including opt-in, sales page, upsell, and automated email follow-up sequence for a life coaching client.</p>
+          <div class="portfolio-tech"><span class="tech-pill">GoHighLevel</span><span class="tech-pill">Automation</span><span class="tech-pill">Email Campaigns</span></div>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#1A0F2E;">
+          <span>📱</span>
+          <div class="portfolio-tag">Social Media</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>Brand Social Media Revamp</h3>
+          <p>Managed and rebranded Instagram & Facebook for a local business — including content strategy, Canva graphics, and a 3× increase in monthly engagement.</p>
+          <div class="portfolio-tech"><span class="tech-pill">Canva</span><span class="tech-pill">Instagram</span><span class="tech-pill">Facebook</span></div>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#0A1F2E;">
+          <span>🔄</span>
+          <div class="portfolio-tag">Automation</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>CRM Pipeline & Workflow Setup</h3>
+          <p>Configured a full CRM system in GHL for a real estate investor: lead intake, pipeline stages, automated follow-ups, and appointment booking.</p>
+          <div class="portfolio-tech"><span class="tech-pill">GoHighLevel</span><span class="tech-pill">CRM</span><span class="tech-pill">Workflows</span></div>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#1C1A0F;">
+          <span>🎨</span>
+          <div class="portfolio-tag">Design</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>Social Media Graphic Templates</h3>
+          <p>Designed a set of 20+ branded social media templates in Canva for a wellness brand — reels covers, carousels, story templates, and promotional banners.</p>
+          <div class="portfolio-tech"><span class="tech-pill">Canva</span><span class="tech-pill">Brand Design</span><span class="tech-pill">Content Creation</span></div>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#0F1F2A;">
+          <span>🌐</span>
+          <div class="portfolio-tag">Website</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>GHL Website for Service Business</h3>
+          <p>Designed and launched a professional multi-page website inside GoHighLevel for a home services company, including booking integration and lead capture.</p>
+          <div class="portfolio-tech"><span class="tech-pill">GoHighLevel</span><span class="tech-pill">Web Design</span><span class="tech-pill">Lead Capture</span></div>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-in">
+        <div class="portfolio-img" style="background:#1A1A1A;">
+          <span>📊</span>
+          <div class="portfolio-tag">Lead Gen</div>
+        </div>
+        <div class="portfolio-body">
+          <h3>Facebook Lead Ad + GHL Integration</h3>
+          <p>Set up a Facebook lead ad campaign connected directly to GHL, with instant follow-up SMS and email automations that contacted leads within 5 minutes.</p>
+          <div class="portfolio-tech"><span class="tech-pill">Facebook Ads</span><span class="tech-pill">GoHighLevel</span><span class="tech-pill">SMS Automation</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-eyebrow">Experience</div>
+    <h2 class="section-title">Professional journey</h2>
+    <div class="timeline">
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot">💼</div>
+        <span class="timeline-year">2023 – Present</span>
+        <h3>Freelance Virtual Assistant & GHL Specialist</h3>
+        <p class="company">Independent · Remote · International Clients</p>
+        <ul>
+          <li>Built and launched GoHighLevel funnels, websites, and automations for coaches, consultants, and agencies</li>
+          <li>Managed social media accounts across Facebook and Instagram with measurable growth in engagement</li>
+          <li>Provided full executive VA support including email management, calendar coordination, and CRM maintenance</li>
+          <li>Created branded Canva content for social media, lead magnets, and email campaigns</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot">📱</div>
+        <span class="timeline-year">2022 – 2023</span>
+        <h3>Social Media Manager</h3>
+        <p class="company">Small Business Client · Remote</p>
+        <ul>
+          <li>Handled end-to-end social media management for Facebook and Instagram pages</li>
+          <li>Developed monthly content calendars aligned with promotions and business goals</li>
+          <li>Designed all visual content using Canva, maintaining consistent brand identity</li>
+          <li>Monitored analytics and adjusted content strategy based on performance data</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot">🛠️</div>
+        <span class="timeline-year">2021 – 2022</span>
+        <h3>Administrative Virtual Assistant</h3>
+        <p class="company">Client-Based · Entry-Level Remote Work</p>
+        <ul>
+          <li>Managed emails, scheduling, and data entry tasks for an online business owner</li>
+          <li>Handled customer support inquiries and maintained client records</li>
+          <li>Assisted with research, documentation, and basic content management tasks</li>
+          <li>Developed strong foundations in Google Workspace, Trello, and digital communication tools</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why">
+  <div class="container">
+    <div class="section-eyebrow">Why Choose Me</div>
+    <h2 class="section-title" style="color:var(--white);">What sets me apart</h2>
+    <p class="section-sub">I'm not just a VA. I'm a business partner who cares about your outcomes as much as you do.</p>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-num">✓</div>
+        <h3>Reliability You Can Count On</h3>
+        <p>I show up on time, hit deadlines, and communicate proactively. You'll never have to chase me for updates.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">✓</div>
+        <h3>Crystal-Clear Communication</h3>
+        <p>I keep you in the loop with regular check-ins and clear status updates — no ambiguity, no surprises.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">✓</div>
+        <h3>Obsessive Attention to Detail</h3>
+        <p>From a typo in a funnel to an off-brand color in a graphic — I catch the details that protect your brand.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">✓</div>
+        <h3>Solutions-First Thinking</h3>
+        <p>I don't just flag problems — I come with proposed solutions and take ownership of making things work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-eyebrow">Testimonials</div>
+    <h2 class="section-title">What clients say</h2>
+    <div class="testi-grid">
+
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Dally completely transformed how our business runs in GoHighLevel. Our lead follow-up is now instant and automated — we've closed more deals in the past month than the whole quarter before. She's the real deal."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">JM</div>
+          <div class="testi-info"><strong>James M.</strong><span>Business Coach · USA</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Working with Dally on our social media was the best decision we made this year. Our Instagram engagement tripled and our content finally looks professional and consistent. She's fast, creative, and so easy to work with."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">SR</div>
+          <div class="testi-info"><strong>Sofia R.</strong><span>Wellness Brand Owner · Australia</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I hired Dally as my VA and she quickly became indispensable. My inbox is under control, my calendar is organized, and I have time to focus on my clients again. Incredibly detail-oriented and proactive."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">TL</div>
+          <div class="testi-info"><strong>Thomas L.</strong><span>Online Entrepreneur · UK</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title" style="color:var(--white);">Let's work together</h2>
+    <p class="section-sub">Ready to get more done, automate your systems, or grow your audience? Send me a message and let's talk about how I can help.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-methods">
+          <a href="mailto:dally.malinao@email.com" class="contact-method">
+            <div class="method-icon">✉️</div>
+            <div><div class="method-label">Email</div><div class="method-value">dally.malinao@email.com</div></div>
+          </a>
+          <a href="https://wa.me/63XXXXXXXXXX" class="contact-method">
+            <div class="method-icon">💬</div>
+            <div><div class="method-label">WhatsApp</div><div class="method-value">+63 XXX XXX XXXX</div></div>
+          </a>
+          <a href="https://linkedin.com/in/dallymalinao" class="contact-method">
+            <div class="method-icon">💼</div>
+            <div><div class="method-label">LinkedIn</div><div class="method-value">linkedin.com/in/dallymalinao</div></div>
+          </a>
+          <a href="https://upwork.com" class="contact-method">
+            <div class="method-icon">🌐</div>
+            <div><div class="method-label">Upwork / Freelancer Profile</div><div class="method-value">View my profile →</div></div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <select>
+          <option value="" disabled selected>Service Needed</option>
+          <option>Virtual Assistant</option>
+          <option>Social Media Management</option>
+          <option>GoHighLevel Setup & Automation</option>
+          <option>Lead Generation</option>
+          <option>Administrative Support</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell me about your project or what you need help with..."></textarea>
+        <button type="submit" class="btn-primary">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Dally<span>.</span></div>
+  <p style="margin-top:0.5rem;">Virtual Assistant · Social Media Manager · GoHighLevel Specialist</p>
+  <p style="margin-top:0.25rem;">Based in the Philippines · Available globally</p>
+  <p style="margin-top:1rem;">© 2026 Dally Malinao. All rights reserved.</p>
+</footer>
+
+<script>
+  // Mobile nav
+  document.getElementById('mobileBtn').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Typewriter
+  const roles = ['Virtual Assistant', 'Social Media Manager', 'GoHighLevel Specialist', 'Business Growth Partner'];
+  let roleIndex = 0, charIndex = 0, isDeleting = false;
+  const typedEl = document.getElementById('typed');
+
+  function type() {
+    const current = roles[roleIndex];
+    if (isDeleting) {
+      typedEl.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typedEl.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    let delay = isDeleting ? 60 : 90;
+    if (!isDeleting && charIndex === current.length) {
+      delay = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      delay = 300;
+    }
+    setTimeout(type, delay);
+  }
+  type();
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Animate skill bars on scroll
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-bar-card').forEach(el => {
+    el.querySelectorAll('.skill-fill').forEach(b => b.style.width = '0');
+    barObserver.observe(el);
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Message Sent! ✓';
+    btn.style.background = '#059669';
+    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+  }
+</script>
+</body>
+</html>
