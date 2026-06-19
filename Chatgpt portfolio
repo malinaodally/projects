@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dally Malinao | Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.95);
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(249, 217, 106, 0.2);
+    }
+
+    nav h2 {
+      color: #f9d96a;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #f9d96a;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #050505, #0f5132);
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f9d96a;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #e6e6e6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin-right: 15px;
+      background: #f9d96a;
+      color: #050505;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(249, 217, 106, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #f9d96a;
+      color: #f9d96a;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #f9d96a;
+    }
+
+    .section-title p {
+      color: #cccccc;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .photo-box {
+      height: 350px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0f5132, #f9d96a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050505;
+      font-size: 80px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(249, 217, 106, 0.2);
+      border-radius: 18px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #f9d96a;
+    }
+
+    .card i {
+      font-size: 35px;
+      color: #f9d96a;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #cccccc;
+      font-size: 15px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill {
+      padding: 12px 20px;
+      background: rgba(15, 81, 50, 0.8);
+      border: 1px solid rgba(249, 217, 106, 0.3);
+      border-radius: 30px;
+      color: #f9d96a;
+      font-weight: bold;
+    }
+
+    .project-img {
+      height: 170px;
+      background: linear-gradient(135deg, #0f5132, #222);
+      border-radius: 14px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9d96a;
+      font-size: 45px;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      padding: 25px;
+      margin-bottom: 20px;
+      border-left: 4px solid #f9d96a;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #0f5132, #050505);
+    }
+
+    .contact a {
+      color: #f9d96a;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      margin: 12px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #030303;
+      color: #aaa;
+      border-top: 1px solid rgba(249, 217, 106, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav div {
+        margin-top: 12px;
+      }
+
+      nav a {
+        margin: 8px;
+        display: inline-block;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>Dally Malinao</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Helping Businesses Grow Through <span>Automation, Social Media, and Systems</span></h1>
+      <p>Virtual Assistant | Social Media Manager | GoHighLevel Specialist</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Professional support for growing businesses</p>
+    </div>
+
+    <div class="about">
+      <div class="photo-box">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <div>
+        <h2>Hello, I’m Dally Malinao</h2>
+        <p>
+          I help businesses streamline operations, generate leads, manage social media,
+          and automate customer journeys using GoHighLevel and modern marketing systems.
+        </p>
+        <br>
+        <p>
+          My work focuses on helping business owners save time, stay organized, and create
+          better customer experiences through strong systems, creative content, and reliable support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Services</h2>
+      <p>What I can help you with</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-gears"></i>
+        <h3>GoHighLevel Setup</h3>
+        <p>Funnels, workflows, calendars, forms, pipelines, and automations.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-hashtag"></i>
+        <h3>Social Media Management</h3>
+        <p>Content planning, captions, graphics, scheduling, and engagement support.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Lead Generation</h3>
+        <p>Landing pages, lead magnets, forms, and follow-up systems.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email & SMS Automation</h3>
+        <p>Automated messages, reminders, follow-ups, and appointment confirmations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Tools and platforms I use</p>
+    </div>
+
+    <div class="skills">
+      <span class="skill">GoHighLevel</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Social Media</span>
+      <span class="skill">Facebook Marketing</span>
+      <span class="skill">Instagram Marketing</span>
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Trello</span>
+      <span class="skill">Google Workspace</span>
+      <span class="skill">CRM Management</span>
+      <span class="skill">Customer Support</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">
+      <h2>Portfolio Projects</h2>
+      <p>Sample work and project experience</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="project-img"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Credit Repair Landing Page</h3>
+        <p>Designed and built a lead-generation landing page in GoHighLevel with booking automation and lead magnet delivery.</p>
+      </div>
+
+      <div class="card">
+        <div class="project-img"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Tax Services Social Media Campaign</h3>
+        <p>Created educational content, graphics, captions, and engagement campaigns for a financial services brand.</p>
+      </div>
+
+      <div class="card">
+        <div class="project-img"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>GoHighLevel Appointment Automation</h3>
+        <p>Built automated workflows, reminders, and follow-up systems to improve appointment show rates.</p>
+      </div>
+
+      <div class="card">
+        <div class="project-img"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+        <h3>Credit Cleanup Kit Funnel</h3>
+        <p>Created a complete lead generation funnel with forms, workflow automation, email delivery, and booking integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Experience</h2>
+      <p>Areas I have worked on</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Social Media Management</h3>
+        <p>Created graphics, captions, posting plans, and engagement content for business pages.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>GoHighLevel Automation</h3>
+        <p>Built workflows for lead capture, appointment reminders, follow-ups, and customer communication.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Landing Page Development</h3>
+        <p>Created responsive landing pages for lead magnets, booking pages, and service promotions.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Client Support</h3>
+        <p>Assisted with organizing tasks, updating systems, and supporting marketing operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Testimonials</h2>
+      <p>Client feedback</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <p>“Dally is reliable, creative, and detail-oriented. She helped organize our content and improve our workflow.”</p>
+        <br>
+        <h3>Client Name</h3>
+      </div>
+
+      <div class="card">
+        <p>“She helped set up our automation and landing page process smoothly. Very easy to work with.”</p>
+        <br>
+        <h3>Client Name</h3>
+      </div>
+
+      <div class="card">
+        <p>“Great support with social media graphics, captions, and GoHighLevel tasks.”</p>
+        <br>
+        <h3>Client Name</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+      <p>Let’s work together</p>
+    </div>
+
+    <a href="mailto:malinao.dally@gmail.com">
+      <i class="fa-solid fa-envelope"></i> malinao.dally@gmail.com
+    </a>
+
+    <a href="#">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
+
+    <a href="#">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="#">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2026 Dally Malinao. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
