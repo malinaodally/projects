@@ -13,28 +13,34 @@
 <style>
 /* ============ TOKENS ============ */
 :root {
-  --bg: #FAFAF8;
-  --surface: #FFFFFF;
-  --surface-2: #F2F1EC;
-  --border: #E2E0D6;
-  --text: #15201A;
-  --text-dim: #5B6660;
-  --text-faint: #8C958F;
-  --green: #1F8B53;
-  --green-bright: #2FB86B;
-  --gold: #A9821B;
-  --gold-bright: #C9A227;
-  --on-accent: #FFFFFF;
-  --shadow: 0 1px 2px rgba(21,32,26,0.04), 0 8px 24px rgba(21,32,26,0.06);
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --grid-line: rgba(21,32,26,0.06);
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    ...
+    color-scheme: light;
+}
 
-  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+/* Service Highlights */
+.service-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
 
-  color-scheme: light;
+.service-highlights span {
+    padding: 10px 16px;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 50px;
+    color: #22c55e;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-highlights span:hover {
+    transform: translateY(-2px);
+    border-color: #22c55e;
 }
 
 html.dark {
