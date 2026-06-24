@@ -816,8 +816,15 @@ h1,h2,h3,h4{
    
 .workflow-card{
     grid-column: 1 / -1;
-    width: 50%;
+    max-width: 520px;
     margin: 0 auto;
+}
+
+.workflow-card img{
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    background: #fff;
 }
 
 @media(max-width:768px){
