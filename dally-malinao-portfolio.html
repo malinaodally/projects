@@ -826,6 +826,33 @@ h1,h2,h3,h4{
     object-fit: contain;
     background: #fff;
 }
+   .sample-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:rgba(0,0,0,.65);
+    color:#fff;
+    font-size:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.sample-card:hover .play-button{
+    background:#d4af37;
+    color:#000;
+    transform:translate(-50%,-50%) scale(1.1);
+}
 
 @media(max-width:768px){
     .samples-grid{
@@ -1601,17 +1628,19 @@ From GoHighLevel automation and CRM management to social media support and admin
   </a>
 </div>
 
-       <div class="sample-card">
-  <a href="https://raw.githubusercontent.com/malinaodally/projects/main/Infinity%20PF%20Reels%2006-16-26%20Evening.mp4" target="_blank">
-    <div class="sample-image">
-      <img src="https://raw.githubusercontent.com/malinaodally/projects/main/Infinity%20PF%20Collage.png" alt="Instagram Reels Thumbnail">
-    </div>
+       <!-- Instagram Reels -->
+<div class="sample-card">
+    <a href="https://raw.githubusercontent.com/malinaodally/projects/main/Infinity%20PF%20Reels%2006-16-26%20Evening.mp4" target="_blank">
+        <div class="sample-image">
+    <img src="https://raw.githubusercontent.com/malinaodally/projects/main/Untitled%20(1920%20x%201000%20px).png" alt="Instagram Reels Thumbnail">
+    <div class="play-button">▶</div>
+</div>
 
-    <div class="sample-content">
-      <h3>Instagram Reels</h3>
-      <p>Short-form video content created for social media marketing, audience engagement, and brand awareness campaigns.</p>
-    </div>
-  </a>
+        <div class="sample-content">
+            <h3>Instagram Reels</h3>
+            <p>Short-form video content created for social media marketing, audience engagement, and brand awareness campaigns.</p>
+        </div>
+    </a>
 </div>
         </div>
 
