@@ -316,17 +316,55 @@ section{ padding: 110px 0; position: relative; }
 /* ==========================================================================
    SKILLS
    ========================================================================== */
-.skills__columns{ display:grid; grid-template-columns: repeat(3,1fr); gap: 40px; margin-top: 20px; }
-.skills__col-title{ font-size: 1.1rem; margin-bottom: 22px; color: var(--gold-light); }
-.skill-bar{ margin-bottom: 20px; }
-.skill-bar__top{ display:flex; justify-content:space-between; font-size:.86rem; margin-bottom:8px; color: var(--text-muted); }
-.skill-bar__track{ height:8px; border-radius:6px; background: var(--glass-bg); border: 1px solid var(--border-glass); overflow:hidden; }
-.skill-bar__fill{
-  height:100%; width:0%; border-radius:6px;
-  background: linear-gradient(90deg, var(--emerald), var(--gold));
-  transition: width 1.4s var(--ease);
+.skills__columns{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-top:20px;
 }
-.skill-bar.filled .skill-bar__fill{ width: var(--fill, 0%); }
+
+.skills__col-title{
+    font-size:1.1rem;
+    margin-bottom:22px;
+    color:var(--gold-light);
+}
+
+.skill-bars{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.skill-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:var(--text-muted);
+}
+
+.skill-level{
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.skill-level.advanced{
+    background:var(--emerald);
+    color:#fff;
+}
+
+.skill-level.intermediate{
+    background:var(--gold);
+    color:#111;
+}
+
+.skill-level.learning{
+    background:rgba(255,255,255,.14);
+    color:#fff;
+}
 
 /* ==========================================================================
    SERVICES
