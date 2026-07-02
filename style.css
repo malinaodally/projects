@@ -317,10 +317,11 @@ section{ padding: 110px 0; position: relative; }
    SKILLS
    ========================================================================== */
 .skills__columns{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
-    margin-top:20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 70px;   /* Space between columns */
+    row-gap: 30px;      /* Space between rows */
+    margin-top: 35px;
 }
 
 .skills__col-title{
