@@ -234,99 +234,60 @@ section{ padding: 110px 0; position: relative; }
 /* ==========================================================================
    HERO
    ========================================================================== */
-.hero {
-  min-height: 100vh;
-  padding: 120px 8% 60px;
-  display: grid;
-  grid-template-columns: 45% 55%;
-  align-items: center;
-  gap: 40px;
-  background:
-    radial-gradient(circle at right, rgba(180, 137, 38, 0.18), transparent 35%),
-    linear-gradient(135deg, #07120c 0%, #0b1f14 45%, #020403 100%);
-  overflow: hidden;
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 8%;
 }
 
-.hero-content {
-  max-width: 620px;
-  z-index: 2;
+.hero-content{
+    width:100%;
+    max-width:1300px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
 }
 
-.hero-label {
-  color: #b48926;
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  margin-bottom: 22px;
+.hero-text{
+    flex:1;
+    max-width:600px;
 }
 
-.hero h1 {
-  color: #ffffff;
-  font-size: clamp(3rem, 6vw, 6.5rem);
-  line-height: 0.95;
-  margin-bottom: 26px;
+.hero-tag{
+    display:block;
+    margin-bottom:20px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:2px;
 }
 
-.hero h1 span {
-  color: #b48926;
+.hero-text h1{
+    font-size:68px;
+    line-height:1.05;
+    margin-bottom:25px;
 }
 
-.hero-description {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 520px;
-  margin-bottom: 34px;
+.hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:40px;
+    max-width:550px;
 }
 
-.hero-btn {
-  display: inline-block;
-  padding: 15px 34px;
-  background: #b48926;
-  color: #08110c;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: 700;
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
 }
 
-.hero-image {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.hero-image img {
-  width: 110%;
-  max-width: 780px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-top: 120px;
-  }
-
-  .hero-content {
-    margin: 0 auto;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-image {
-    justify-content: center;
-  }
-
-  .hero-image img {
-    width: 95%;
-  }
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    height:auto;
 }
 /* ==========================================================================
    ABOUT
