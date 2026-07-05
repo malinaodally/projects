@@ -428,8 +428,17 @@ section{ padding: 110px 0; position: relative; }
 
 .client-block{ margin-bottom: 64px; }
 .client-block__header{ display:grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items:center; margin-bottom: 26px; }
-.client-block__feature{ border-radius: var(--radius-lg); overflow:hidden; aspect-ratio: 16/9; }
-.client-block__feature img{ width:100%; height:100%; object-fit:cover; }
+.client-block__feature{
+    border-radius: var(--radius-lg);
+    overflow:hidden;
+}
+
+.client-block__feature img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
 .client-block__info h3{ font-size: 1.5rem; margin-bottom: 12px; }
 .client-block__info p{ color: var(--text-muted); margin: 0 0 14px; }
 
