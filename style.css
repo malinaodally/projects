@@ -246,9 +246,9 @@ section{ padding: 110px 0; position: relative; }
     width:100%;
     max-width:1300px;
 
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr 1fr;
     align-items:center;
-    justify-content:space-between;
     gap:80px;
 }
 
