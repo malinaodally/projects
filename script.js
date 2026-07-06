@@ -235,7 +235,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   allGalleryItems.forEach((item, idx) => {
-  item.addEventListener('click', () => openLightbox(idx));
+    item.addEventListener('click', () => {
+        console.log("Clicked:", idx);
+        openLightbox(idx);
+    });
 });
 
   lightboxClose.addEventListener('click', closeLightbox);
