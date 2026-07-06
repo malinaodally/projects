@@ -198,6 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
   let currentIndex = 0;
 
+   allGalleryItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    openLightbox(index);
+  });
+});
+
   function openLightbox(index){
     currentIndex = index;
     renderLightbox();
