@@ -106,7 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setTimeout(typeLoop, deleting ? 35 : 65);
   }
-  typeLoop();
+  if (typedEl) {
+    typeLoop();
+}
 
   /* ---------- Animated counters ---------- */
   const statNums = document.querySelectorAll('.stat-num');
