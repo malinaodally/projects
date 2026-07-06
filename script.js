@@ -2,6 +2,7 @@
    DALLY MALINAO — PORTFOLIO SCRIPT
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+   console.log("SCRIPT IS UPDATED");
 
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
