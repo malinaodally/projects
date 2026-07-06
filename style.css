@@ -558,7 +558,11 @@ section{ padding: 110px 0; position: relative; }
    GHL PROJECTS
    ========================================================================== */
 .ghl-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.ghl-card{ overflow:hidden; transition: transform .4s var(--ease); }
+.ghl-card{
+  overflow:hidden;
+  transition: transform .4s var(--ease);
+  cursor: zoom-in;
+}
 .ghl-card:hover{ transform: translateY(-6px); }
 .ghl-card img{ width:100%; height: 170px; object-fit:cover; }
 .ghl-card h3{ font-size: 1rem; margin: 18px 20px 8px; }
