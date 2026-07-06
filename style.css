@@ -137,6 +137,20 @@ h1,h2,h3,h4{
   animation: ripple .6s ease-out;
   pointer-events: none;
 }
+.btn.btn-gold {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #D5AE5B, #F2D056) !important;
+  color: #14140F !important;
+  border: 1px solid #D5AE5B !important;
+  padding: 14px 28px !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 @keyframes ripple{ to{ transform: scale(3); opacity: 0; } }
 
 /* ---------- Glass ---------- */
