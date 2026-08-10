@@ -379,65 +379,88 @@ section{ padding: 110px 0; position: relative; }
    SERVICES
    ========================================================= */
 
+.services {
+  padding: 100px 0;
+}
+
+.section-description {
+  max-width: 680px;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 .services__grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
-    margin-top: 20px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .services__grid > .service-card {
-    grid-column: auto !important;
-    grid-row: auto !important;
-    width: auto;
-    min-height: 260px;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  width: auto;
+  min-width: 0;
 }
 
 .service-card {
-    padding: 30px 24px;
-    transition:
-        transform 0.4s var(--ease),
-        border-color 0.4s,
-        box-shadow 0.4s;
+  padding: 30px 24px;
+  min-height: 260px;
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.4s,
+    box-shadow 0.4s;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--emerald);
-    box-shadow: 0 20px 40px -20px rgba(31, 150, 26, 0.4);
+  transform: translateY(-8px);
+  border-color: var(--emerald);
+  box-shadow: 0 20px 40px -20px rgba(31, 150, 26, 0.4);
 }
 
 .service-card__icon {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
 .service-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  line-height: 1.15;
 }
 
 .service-card p {
-    color: var(--text-muted);
-    font-size: 0.88rem;
-    margin: 0;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
 /* Tablet */
 @media (max-width: 1000px) {
-    .services__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    .services__grid {
-        grid-template-columns: 1fr;
-    }
-}
+  .services {
+    padding: 70px 0;
+  }
 
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+}
 /* ==========================================================================
    PORTFOLIO
    ========================================================================== */
