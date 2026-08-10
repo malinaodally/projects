@@ -375,15 +375,68 @@ section{ padding: 110px 0; position: relative; }
     color:#fff;
 }
 
-/* ==========================================================================
+/* =========================================================
    SERVICES
-   ========================================================================== */
-.services__grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 20px; }
-.service-card{ padding: 30px 24px; transition: transform .4s var(--ease), border-color .4s, box-shadow .4s; }
-.service-card:hover{ transform: translateY(-8px); border-color: var(--emerald); box-shadow: 0 20px 40px -20px rgba(31,150,26,.4); }
-.service-card__icon{ font-size: 1.8rem; margin-bottom: 16px; }
-.service-card h3{ font-size: 1.05rem; margin-bottom: 10px; }
-.service-card p{ color: var(--text-muted); font-size: .88rem; margin:0; }
+   ========================================================= */
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.services__grid > .service-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: auto;
+    min-height: 260px;
+}
+
+.service-card {
+    padding: 30px 24px;
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s,
+        box-shadow 0.4s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--emerald);
+    box-shadow: 0 20px 40px -20px rgba(31, 150, 26, 0.4);
+}
+
+.service-card__icon {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.service-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .services__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ==========================================================================
    PORTFOLIO
