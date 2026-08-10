@@ -359,12 +359,26 @@ Organized and Connected</h2>
     <h2 class="section-title reveal-up">Selected Projects</h2>
 
     <div class="portfolio__filters reveal-up">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="gohighlevel">GoHighLevel</button>
-      <button class="filter-btn" data-filter="social-media">Social Media</button>
-      <button class="filter-btn" data-filter="websites">Websites</button>
-      
-    </div>
+    <button class="filter-btn active"
+            onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })">
+        All
+    </button>
+
+    <button class="filter-btn"
+            onclick="document.getElementById('website-projects').scrollIntoView({ behavior: 'smooth' })">
+        Websites
+    </button>
+
+    <button class="filter-btn"
+            onclick="document.getElementById('ghl-projects').scrollIntoView({ behavior: 'smooth' })">
+        GoHighLevel
+    </button>
+
+    <button class="filter-btn"
+            onclick="document.getElementById('social-media-projects').scrollIntoView({ behavior: 'smooth' })">
+        Social Media
+    </button>
+</div>
 
     <!-- ============ GOHIGHLEVEL PROJECTS ============ -->
 <section class="ghl-projects" id="ghl-projects">
