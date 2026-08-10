@@ -464,15 +464,40 @@ section{ padding: 110px 0; position: relative; }
 /* ==========================================================================
    PORTFOLIO
    ========================================================================== */
-.portfolio__filters{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 36px; }
-.filter-btn{
-  padding: 9px 20px; border-radius: 999px; border: 1px solid var(--border-glass);
-  background: transparent; color: var(--text-muted); font-size: .85rem; font-weight:600;
-  transition: all .3s var(--ease);
+.portfolio__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
 }
-.filter-btn:hover{ color: var(--white); }
-.filter-btn.active{ background: linear-gradient(135deg, var(--emerald), var(--emerald-light)); color:#fff; border-color: transparent; }
 
+.section-link-btn {
+  padding: 9px 20px;
+  border: 1px solid var(--border-glass);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.section-link-btn:hover {
+  color: var(--white);
+  border-color: var(--emerald);
+}
+
+.section-link-btn.active {
+  background: linear-gradient(
+    135deg,
+    var(--emerald),
+    var(--emerald-light)
+  );
+  color: #fff;
+  border-color: transparent;
+}
 .portfolio__grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .project-card{ overflow:hidden; transition: transform .4s var(--ease), box-shadow .4s; }
 .project-card:hover{ transform: translateY(-8px); box-shadow: 0 24px 50px -24px rgba(0,0,0,.6); }
